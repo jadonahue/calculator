@@ -17,7 +17,7 @@ app.post("/", function(req, res){
     var num2 = Number(req.body.num2); // Number changes this from text to number
     var result = num1 + num2;
 
-    res.send("The sum calculation is " + result);
+    res.send("The sum is " + result + ".");
 });
 
 // This gets the dir name/bmiCalculator file from server.
@@ -31,7 +31,7 @@ app.post("/bmiCalculator", function(req, res){
     var height = parseFloat(req.body.height); 
     var bmiResult = Math.round(weight / Math.pow(height, 2)); // Calculate BMI
 
-    res.send("Your body mass index is " + bmiResult);
+    res.send("Your body mass index is " + bmiResult + ".");
 });
 
 app.listen(port, function(){

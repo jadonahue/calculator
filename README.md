@@ -7,3 +7,12 @@ While the server is running locally you can access the website using http://loca
 A normal addition or sum calclulator can be found at the url: http://localhost:3000/
 
 A BMI(Body Mass Index) calculator can be found at the url: http://localhost:3000/bmiCalculator
+
+---
+
+Screenshots
+
+<img src="images/calculator-input.png">
+<img src="images/calculator-sum-result.png">
+<img src="images/bmi-calculator-input.png">
+<img src="images/bmi-calculator-result.png">
