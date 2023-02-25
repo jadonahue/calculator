@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const bodyParser = require("body-parser");
 
+// This sets up body-parser for use.
 app.use(bodyParser.urlencoded({extended: true}));
 
 // When getting the index.html file, its best practice to use "__dirname" + "/index.html"
@@ -13,9 +14,9 @@ app.get("/", function(req, res){
 
 // This replies to the post for /, the normal calculator for addition.
 app.post("/", function(req, res){
-    var num1 = Number(req.body.num1); // Number changes this from text to number
-    var num2 = Number(req.body.num2); // Number changes this from text to number
-    var result = num1 + num2;
+    let num1 = Number(req.body.num1); // Number changes this from text to number
+    let num2 = Number(req.body.num2); // Number changes this from text to number
+    let result = num1 + num2;
 
     res.send("The sum is " + result + ".");
 });
@@ -27,9 +28,9 @@ app.get("/bmiCalculator", function(req, res){
 
 // This replies to the post for /bmiCalculator for the bmi calculator
 app.post("/bmiCalculator", function(req, res){
-    var weight = parseFloat(req.body.weight);
-    var height = parseFloat(req.body.height); 
-    var bmiResult = Math.round(weight / Math.pow(height, 2)); // Calculate BMI
+    let weight = parseFloat(req.body.weight);
+    let height = parseFloat(req.body.height); 
+    let bmiResult = Math.round(weight / Math.pow(height, 2)); // Calculate BMI
 
     res.send("Your body mass index is " + bmiResult + ".");
 });
